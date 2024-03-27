@@ -154,6 +154,7 @@ body{
     background-color: rgb(31, 182, 94);
     border-radius: 20px;
 }
+
 .review{
     margin-top: 20px;
     padding: 20px;
@@ -162,8 +163,21 @@ body{
 .review-text p{
     padding-right: 65px;
 }
+.review-text-img h5{
+    margin: 0;
+}
+.review-text-img p{
+    margin: 0;
+}
 .teacher p{
     color: lightcoral;
+}
+.features{
+    display:flex;
+}
+.features{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 .features ul{
     list-style: none;
@@ -189,9 +203,13 @@ body{
     border-radius: 20px;
     background-color: rgb(3, 214, 144);
 }
+.features{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
 .footer-m{
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 .foot1{
     margin-top: 1rem !important;
@@ -225,7 +243,9 @@ body{
     .course{
         margin-top: 80px;
     }
-   
+    .teacher{
+        margin-top: 0;
+    }
     .review-text p{
         padding-right: 20px;
     }
@@ -243,12 +263,16 @@ body{
         font-size: 10px;
     }
     .discount-text {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .features{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     .footer-m {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     
 }
@@ -270,15 +294,26 @@ body{
         margin-top: 25px;
     }
     .discount-text {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .features{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
     .footer-m {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .footer-menu h5{
+        font-size: 15px;
     }
 }
 @media (max-width:576px){
+    .features{
+        display:flex;
+        flex-direction: column;
+    }
     .poster h1{
         font-size: 40px;
     }
