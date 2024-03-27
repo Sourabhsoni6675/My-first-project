@@ -4,6 +4,13 @@ body{
 .navbar-toggler:focus{
     box-shadow: none;
 }
+.form-control:focus{
+    box-shadow: none;
+}
+.mobile-view{
+    transition: none;
+}
+
 .nav-bold{
     font-weight: bold;
 }
@@ -138,6 +145,11 @@ body{
 }
 .course-title{
     font-size: 15px;
+}
+.course-head-btn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 /* .card-group .card p{
     font-size: 12px;
@@ -331,5 +343,19 @@ body{
     }
     .course{
         margin-top: 50px;
+    }
+    .course-head{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .course-head-btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .size{
+        width: 80%;
     }
 }
