@@ -188,6 +188,9 @@ body{
 .features ul p{
     font-size: 15px;
 }
+.features ul i{
+    margin-top: 5px;
+}
 .discount{
     background-color: rgb(253, 206, 253);
 }
