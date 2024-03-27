@@ -1,0 +1,294 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+.nav-bold{
+    font-weight: bold;
+}
+.nav-bold ul li.active a{
+    color: yellowgreen;
+}
+.g-bg{
+    background-image: url(../img/billboard-bg.png);
+    background-repeat: no-repeat;
+}
+.poster h1{
+    font-size: 70px;
+}
+.search-bar{
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+}
+.search-bar input{
+    border: none;
+}
+.search-bar button{
+    color: white;
+    background-color: green;
+}
+.mobile-view .navbar-nav {
+    flex-direction: row !important;
+}
+.mobile-view .navbar-nav .nav-item{
+    padding: 0 5px;
+}
+.box-section{
+    display: flex;
+    position: relative;
+}
+.box{
+    position: relative;
+    background-color: white;
+    padding: 40px 10px; 
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 0px 16px rgb(221, 220, 220);
+    border-radius: 10px;
+    bottom: 40px;
+    margin: 0 20px;
+}
+.box h3{
+    font-size: 20px;
+    color: rgb(250, 105, 129);
+    margin-bottom: 0;
+}
+.box p{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.about-text a{
+    color: rgb(252, 98, 124); 
+    text-decoration: none;
+}
+.about{
+    margin:120px 0;
+}
+.about button:hover{
+    color: white;
+    background-color:rgb(31, 182, 94);
+}
+.about-text ul {
+    list-style: none;
+    
+}
+.about-text p{
+    font-size: 15px;
+}
+.about-text h2{
+    font-size: 50px;
+}
+.about-text button{
+    color: white;
+    width: 200px;
+    background-color: rgb(31, 182, 94);
+    border-radius: 20px;
+}
+.course-head a{
+        color: rgb(252, 98, 124); 
+        text-decoration: none;
+}
+.course-head button{
+    color: white;
+    background-color: rgb(31, 182, 94);
+    border-radius: 20px;
+}
+.course-btn:hover{
+    color: white;
+    background-color: rgb(31, 182, 94);
+}
+.course{
+    margin-top: 120px;
+}
+.courses{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    /* width:18rem; */
+    position: relative;
+    padding: 20px 5px; 
+    /* text-align: center; */
+    box-shadow: 0px 0px 16px rgb(221, 220, 220);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.cs-1{
+    background-color: rgb(223, 236, 253);
+}
+.cs-2{
+    background-color: rgb(196, 196, 196);
+}
+.cs-3{
+    background-color: peachpuff;
+}
+.cs-4{
+    background-color:rgb(255, 219, 224);
+}
+.courses h5{
+    font-size: 15px;
+    color: rgb(7, 7, 7);
+    margin-bottom: 0;
+}
+.courses p{
+    font-size: 10px;
+    margin-bottom: 0;
+
+}
+.course-title{
+    font-size: 15px;
+}
+/* .card-group .card p{
+    font-size: 12px;
+    color: gray;
+} */
+.size{
+    width: 15rem;
+}
+.card-text p{
+    font-size: 10px;
+}
+.badge{
+    background-color: rgb(253, 128, 149);
+}
+.card-button button{
+    color: white;
+    background-color: rgb(31, 182, 94);
+    border-radius: 20px;
+}
+.review{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(204, 230, 253);
+}
+.review-text p{
+    padding-right: 65px;
+}
+.teacher p{
+    color: lightcoral;
+}
+.features ul{
+    list-style: none;
+}
+.features ul p{
+    font-size: 15px;
+}
+.discount{
+    background-color: rgb(253, 206, 253);
+}
+.discount-text{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+.discount-text h3{
+    font-size: 40px;
+}
+.discount-text p{
+    color: tomato;
+}
+.detail-form button{
+    color: white;
+    border-radius: 20px;
+    background-color: rgb(3, 214, 144);
+}
+.footer-m{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+.foot1{
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+.footer-menu ul li a{
+    color: black;
+    text-decoration: none;
+}
+.reserved p:before {
+    content: ' \00A9';
+}
+.fa-check-circle{
+    color: tomato;
+}
+.fa-star{
+    color: limegreen;
+}
+@media (max-width:1200px){
+    .poster h1{
+        font-size: 50px;
+    }
+}
+@media (max-width:992px){
+    .poster h1{
+        font-size: 50px;
+    }
+    .about{
+        margin:50px 0;
+    }
+    .course{
+        margin-top: 80px;
+    }
+   
+    .review-text p{
+        padding-right: 20px;
+    }
+    .review-text img{
+        width: 60px;
+        height: 60px;
+    }
+    .review-text p{
+        font-size: 15px;
+    }
+    .review-text-img h5{
+        font-size: 15px;
+    }
+    .review-text-img p{
+        font-size: 10px;
+    }
+    .discount-text {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .footer-m {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+}
+@media (max-width:768px){
+    .poster h1{
+        font-size: 50px;
+    }
+    .about-text{
+        text-align: center;
+    }
+    .about{
+        margin:40px 0;
+    }
+    .about-text{
+        margin-top: 50px;
+
+    }
+    .review-text{
+        margin-top: 25px;
+    }
+    .discount-text {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .footer-m {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width:576px){
+    .poster h1{
+        font-size: 40px;
+    }
+    .about{
+        margin:30px 0;
+    }
+    .courses{
+        margin-top: 20px;
+    }
+    .course{
+        margin-top: 50px;
+    }
+}

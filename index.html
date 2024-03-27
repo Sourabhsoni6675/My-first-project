@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="logo">
+              </a>
+              <div class="d-lg-none d-flex  justify-content-end mobile-view" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                        </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-handbag" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2m3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6z"/>
+                        </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </a>
+                  </li>
+                </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+              </div>
+              <div class="collapse navbar-collapse justify-content-end nav-bold" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          PAGES
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          COURSES
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          EVENTS
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          BLOG
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          SHOP
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">CONTECT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><u>GET PRO</u></a>
+                    </li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                        </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-handbag" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2m3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6z"/>
+                        </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="g-bg">
+            <div class="container">
+                <div class="row pt-4 poster d-flex justify-content-center align-items-center">
+                    <div class="col-md-6">
+                        <h1>MASTER YOUR SKILLS ONLINE</h1>
+                        <form class="d-flex" role="search">
+                            <div class="search-bar w-100">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success m-2" type="submit">
+                                  <i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./img/girl.jpg" class="img-fluid" alt="girl">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="box-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mt-3">
+                        <div class="box">
+                            <h3>100+</h3>
+                            <p>INSTRUCTOR</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-3">
+                        <div class="box">
+                            <h3>500+</h3>
+                            <p>COURSES</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-3">
+                        <div class="box">
+                            <h3>FREE</h3>
+                            <p>CERTIFICATIONS</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-3">
+                        <div class="box">
+                            <h3>2000+</h3>
+                            <p>HAPPY MAMBERS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-md-6">
+                        <div class="about-img">
+                                <img src="./img/about-img.jpg" class="px-5 img-fluid rounded-circle" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="about-text">
+                            <a href="#">Learn more about us</a>
+                            <h2>About Us</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestiae nam commodi dolore vitae? Numquam minima cum asperiores deleniti possimus provident, officia itaque esse eius, delectus incidunt laudantium adipisci laboriosam!
+                            </p>
+                            <ul class="p-0"> 
+                                <li class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="tomato" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                  </svg>
+                                  <p class="ps-lg-4 ps-sm-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, sequi.</p>
+                                </li>
+                                <li class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="tomato" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                  </svg>
+                                  <p class="ps-lg-4 ps-sm-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, sequi.</p>
+                                </li>
+                                <li class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="tomato" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                  </svg>
+                                  <p class="ps-lg-4 ps-sm-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, sequi.</p>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row course-head">
+                    <div class="col ">
+                        <a href="#">Pick your niche and get started</a>
+                        <h3>Popular Categories</h3>
+                    </div>
+                    <div class="col d-flex justify-content-end align-items-center">
+                        <button type="button" class="btn course-btn">View All Categories</button>
+                    </div>
+                </div>
+                <div class="row mt-5 d-flex justify-content-center">
+                    <div class="col-md-4">
+                        <div class="courses cs-1 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(3, 228, 115)" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                  </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>GRAPHIC DESIGN</h5>
+                                <p>39 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="courses cs-2 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                                        <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
+                                        <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                    </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>Video & Photography</h5>
+                                <p>39 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="courses cs-3 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="goldenrod" class="bi bi-volume-up-fill" viewBox="0 0 16 16">
+                                        <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/>
+                                        <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/>
+                                        <path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"/>
+                                      </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>SEO & MARKETING</h5>
+                                <p>24 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
+                <div class="row mt-3 d-flex justify-content-center">
+                    <div class="col-md-4">
+                        <div class="courses cs-3 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="goldenrod" class="bi bi-volume-up-fill" viewBox="0 0 16 16">
+                                        <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/>
+                                        <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/>
+                                        <path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"/>
+                                      </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>SEO & MARKETING</h5>
+                                <p>24 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="courses cs-4 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="tomato" class="bi bi-laptop" viewBox="0 0 16 16">
+                                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+                                      </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>COMPUTER SCIENCE</h5>
+                                <p>16 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="courses cs-1 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(20, 228, 130)" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                  </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>GRAPHIC DESIGN</h5>
+                                <p>39 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
+                <div class="row mt-3 d-flex justify-content-center">
+                    <div class="col-md-4">
+                        <div class="courses cs-4 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="tomato" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
+                                      </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>BUSINESS & FINEANCE</h5>
+                                <p>16 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="courses cs-3 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="goldenrod" class="bi bi-universal-access" viewBox="0 0 16 16">
+                                        <path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6 5.5l-4.535-.442A.531.531 0 0 1 1.531 4H14.47a.531.531 0 0 1 .066 1.058L10 5.5V9l.452 6.42a.535.535 0 0 1-1.053.174L8.243 9.97c-.064-.252-.422-.252-.486 0l-1.156 5.624a.535.535 0 0 1-1.053-.174L6 9z"/>
+                                      </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>HEALTH & FITNESS</h5>
+                                <p>24 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="courses cs-2 d-flex">
+                            <div class="course-icon ps-md-4 ps-sm-2">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                  </svg>
+                                </i>
+                            </div>
+                            <div class="align-items-center ps-4 pe-4">
+                                <h5>GRAPHIC DESIGN</h5>
+                                <p>39 Courses</p>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="course">
+            <div class="container ">
+                <div class="row">
+                    <div class="col text-center">
+                        <p style="color: rgb(255, 108, 133);"><small>Some of our most popular online courses</small></p>
+                        <h2>Explore Inspiring Online Courses</h2>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-6 col-lg-4 col-xl-3 mb-5 size">
+                      <div class="card rounded-4 border-0 shadow-sm p-3 position-relative">
+                        <a href="#"><img src="./img/item1.jpg" class="img-fluid rounded-3" alt="image"></a>
+                        <div class="badge text-white bg-red position-absolute top-0 start-0 m-4">Sale</div>
+                        <div class="card-body p-0">
+            
+                          <div class="d-flex justify-content-between my-3 card-text">
+                            <p class="text-black-50 fw-bold text-uppercase m-0">Digital Marketing</p>
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                </svg>
+                              <p class="text-black-50 fw-bold text-uppercase m-0">1h 50m</p>
+                            </div>
+                          </div>
+            
+                            <h5 class="course-title py-2 m-0">Mastering the Art of Digital Communication</h5>
+            
+                          <div class="card-text">
+                            <span class="rating d-flex align-items-center mt-3">
+                              <p class="text-muted fw-semibold m-0 me-2">By: James Willam</p>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                          </div>
+            
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3 mb-5 size">
+                      <div class="card rounded-4 border-0 shadow-sm p-3 position-relative">
+                        <a href="#"><img src="./img/item2.jpg" class="img-fluid rounded-3" alt="image"></a>
+                        <div class="badge text-white bg-red position-absolute top-0 start-0 m-4">Sale</div>
+                        <div class="card-body p-0">
+            
+                          <div class="d-flex justify-content-between my-3 card-text">
+                            <p class="text-black-50 fw-bold text-uppercase m-0">Digital Marketing</p>
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                </svg>
+                              <p class="text-black-50 fw-bold text-uppercase m-0">1h 50m</p>
+                            </div>
+                          </div>
+                            <h5 class="course-title py-2 m-0">Web Wizardry 101: Mastering the Internet</h5>
+            
+                          <div class="card-text">
+                            <span class="rating d-flex align-items-center mt-3">
+                              <p class="text-muted fw-semibold m-0 me-2">By: James Willam</p>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                          </div>
+            
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3 mb-5 size">
+                      <div class="card rounded-4 border-0 shadow-sm p-3 position-relative">
+                        <a href="#"><img src="./img/item3.jpg" class="img-fluid rounded-3" alt="image"></a>
+                        <div class="card-body p-0">
+            
+                          <div class="d-flex justify-content-between my-3 card-text">
+                            <p class="text-black-50 fw-bold text-uppercase m-0">Digital Marketing</p>
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                </svg>
+                              <p class="text-black-50 fw-bold text-uppercase m-0">1h 50m</p>
+                            </div>
+                          </div>
+                            <h5 class="course-title py-2 m-0">E-Learning Essentials: A Comprehensive Guide</h5>
+                          <div class="card-text">
+                            <span class="rating d-flex align-items-center mt-3">
+                              <p class="text-muted fw-semibold m-0 me-2">By: James Willam</p>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                          </div>
+            
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3 mb-5 size">
+                        <div class="card rounded-4 border-0 shadow-sm p-3 position-relative">
+                          <a href="#"><img src="./img/item4.jpg" class="img-fluid rounded-3" alt="image"></a>
+                          <div class="badge text-white bg-red position-absolute top-0 start-0 m-4">Sale</div>
+                          <div class="card-body p-0">
+                            <div class="d-flex justify-content-between my-3 card-text">
+                              <p class="text-black-50 fw-bold text-uppercase m-0">Digital Marketing</p>
+                              <div class="d-flex align-items-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                  </svg>
+                                <p class="text-black-50 fw-bold text-uppercase m-0">1h 50m</p>
+                              </div>
+                            </div>
+                            <h5 class="course-title py-2 m-0">CyberClass 101: A Guide to Online Education</h5>
+                            <div class="card-text">
+                                <span class="rating d-flex align-items-center mt-3">
+                                  <p class="text-muted fw-semibold m-0 me-2">By: James Willam</p>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                          
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3 mb-5 size">
+                        <div class="card rounded-4 border-0 shadow-sm p-3 position-relative">
+                            <a href="#"><img src="./img/item5.jpg" class="img-fluid rounded-3" alt="image"></a>
+                            <div class="badge text-white bg-red position-absolute top-0 start-0 m-4">Sale</div>
+                        <div class="card-body p-0">
+                            <div class="d-flex justify-content-between my-3 card-text">
+                                <p class="text-black-50 fw-bold text-uppercase m-0">Digital Marketing</p>
+                                <div class="d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                    </svg>
+                                    <p class="text-black-50 fw-bold text-uppercase m-0">1h 50m</p>
+                                </div>
+                            </div>
+                            <h5 class="course-title py-2 m-0">Mastering the Art of Digital Communication</h5>
+                            <div class="card-text">
+                                <span class="rating d-flex align-items-center mt-3">
+                                  <p class="text-muted fw-semibold m-0 me-2">By: James Willam</p>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3 mb-5 size">
+                        <div class="card rounded-4 border-0 shadow-sm p-3 position-relative">
+                            <a href="#"><img src="./img/item6.jpg" class="img-fluid rounded-3" alt="image"></a>
+                            <div class="badge text-white bg-red position-absolute top-0 start-0 m-4">Sale</div>
+                            <div class="card-body p-0">
+                                <div class="d-flex justify-content-between my-3 card-text">
+                                    <p class="text-black-50 fw-bold text-uppercase m-0">Digital Marketing</p>
+                                <div class="d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                    </svg>
+                                    <p class="text-black-50 fw-bold text-uppercase m-0">1h 50m</p>
+                                </div>
+                            </div>
+                            <h5 class="course-title py-2 m-0">Web Wizardry 101: Mastering the Internet</h5>
+                            <div class="card-text">
+                                <span class="rating d-flex align-items-center mt-3">
+                                  <p class="text-muted fw-semibold m-0 me-2">By: James Willam</p>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                </span>
+                            </div>
+            
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3 mb-5 size">
+                      <div class="card rounded-4 border-0 shadow-sm p-3 position-relative">
+                        <a href="#"><img src="./img/item7.jpg" class="img-fluid rounded-3" alt="image"></a>
+                        <div class="card-body p-0">
+                            <div class="d-flex justify-content-between my-3 card-text">
+                                <p class="text-black-50 fw-bold text-uppercase m-0">Digital Marketing</p>
+                                <div class="d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                    </svg>
+                                    <p class="text-black-50 fw-bold text-uppercase m-0">1h 50m</p>
+                                </div>
+                            </div>
+                            <h5 class="course-title py-2 m-0">E-Learning Essentials: A Comprehensive Guide</h5>
+                            <div class="card-text">
+                                <span class="rating d-flex align-items-center mt-3">
+                                  <p class="text-muted fw-semibold m-0 me-2">By: James Willam</p>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3 mb-5 size">
+                        <div class="card rounded-4 border-0 shadow-sm p-3 position-relative">
+                            <a href="#"><img src="./img/item8.jpg" class="img-fluid rounded-3" alt="image"></a>
+                            <div class="badge text-white bg-red position-absolute top-0 start-0 m-4">Sale</div>
+                        <div class="card-body p-0">
+                            <div class="d-flex justify-content-between my-3 card-text">
+                                <p class="text-black-50 fw-bold text-uppercase m-0">Digital Marketing</p>
+                                <div class="d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                    </svg>
+                                    <p class="text-black-50 fw-bold text-uppercase m-0">1h 50m</p>
+                                </div>
+                            </div>
+                            <h5 class="course-title py-2 m-0">CyberClass 101: A Guide to Online Education</h5>
+                            <div class="card-text">
+                              <span class="rating d-flex align-items-center mt-3">
+                                <p class="text-muted fw-semibold m-0 me-2">By: James Willam</p>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                              </span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="row mt-5">
+                    <div class="col card-button d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn">VIEW ALL COURSES</button>
+                    </div>
+                </div>
+        </section>
+        <section class="review">
+            <div class="container">
+                <div class="row m-md-5">
+                    <div class="col text-center">
+                        <p style="color: palevioletred;"><small>What Our Student Say About Us</small></p>
+                        <h2>Reviews</h2>
+                    </div>
+                </div>
+                <div class="row m-md-5 m-sm-2 review-text d-flex justify-content-between">
+                    <div class="col-md-4 review-text">
+                        <p><small>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Id omnis veritatis culpa neque dignissimos dolorem, quam velit dolorum et sit."</small></p>
+                        <div class="d-flex">
+                            <img src="./img/reviwer1.jpg" class="rounded-circle img-fluid" alt="logo">
+                            <div class="review-text-img">
+                                <h5>Recco Gracia</h5>
+                                <p class="text-muted">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 review-text">
+                        <p><small>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Id omnis veritatis culpa neque dignissimos dolorem, quam velit dolorum et sit."</small></p>
+                        <div class="d-flex">
+                            <img src="./img/reviwer2.jpg" class="img-fluid rounded-circle" alt="logo">
+                            <div class="review-text-img">
+                                <h5>Recco Gracia</h5>
+                                <p class="text-muted">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 review-text">
+                        <p><small>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Id omnis veritatis culpa neque dignissimos dolorem, quam velit dolorum et sit."</small></p>
+                        <div class="d-flex">
+                            <img src="./img/reviwer3.jpg" class="img-fluid rounded-circle" alt="logo">
+                            <div class="review-text-img">
+                                <h5>Recco Gracia</h5>
+                                <p class="text-muted">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <div class="row m-5">
+                    <div class="col text-center">
+                        <p style="color: palevioletred;"><small>Meet Our Popular teachers</small></p>
+                        <h2>Our Teacher</h2>
+                    </div>
+                </div>
+                <div class="row mt-5 teacher ">
+                    <div class="col mt-sm-3 d-flex justify-content-center">
+                        <div class="card rounded-4 " style="width: 12rem;">
+                            <img src="./img/teacher1.jpg" class="card-img-top rounded-4 p-2" alt="teacher">
+                            <div class="card-body text-center">
+                              <h6 class="card-title">Anila Lee</h6>
+                              <p class="card-text">Art Director</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col mt-sm-3 d-flex justify-content-center">
+                        <div class="card rounded-4" style="width: 12rem;">
+                            <img src="./img/teacher2.jpg" class="card-img-top rounded-4 p-2" alt="teacher">
+                            <div class="card-body text-center">
+                              <h6 class="card-title">Bruce Smith</h6>
+                              <p class="card-text">Marketing Expert</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col mt-sm-3 d-flex justify-content-center ">
+                        <div class="card rounded-4" style="width: 12rem;">
+                            <img src="./img/teacher3.jpg" class="card-img-top rounded-4 p-2" alt="teacher">
+                            <div class="card-body text-center">
+                              <h6 class="card-title">Jack Nicholson</h6>
+                              <p class="card-text">SEO Expert</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col mt-sm-3 d-flex justify-content-center ">
+                        <div class="card rounded-4" style="width: 12rem;">
+                            <img src="./img/teacher4.jpg" class="card-img-top rounded-4 p-2" alt="teacher">
+                            <div class="card-body text-center">
+                              <h6 class="card-title">Calvin Ian</h6>
+                              <p class="card-text">Sales Director</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col mt-sm-3 d-flex justify-content-center ">
+                        <div class="card rounded-4" style="width: 12rem;">
+                            <img src="./img/teacher5.jpg" class="card-img-top rounded-4 p-2" alt="teacher">
+                            <div class="card-body text-center">
+                              <h6 class="card-title">Milye Sam</h6>
+                              <p class="card-text">Marketing Expert</p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row m-5">
+                    <div class="col text-center">
+                        <p style="color: palevioletred;"><small>Meet Our Popular teachers</small></p>
+                        <h2>Core Features</h2>
+                    </div>
+                </div>
+                <div class="row features">
+                    <div class="col d-flex align-items-center">
+                        <ul class="p-0">
+                            <li class="d-flex"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                              </svg>
+                              <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, consectetur!</p>
+                            </li>
+                            <li class="d-flex"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                              </svg>
+                              <p class="ps-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, qui?</p>
+                            </li>
+                            <li class="d-flex"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                              </svg>
+                              <p class="ps-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, porro.</p>
+                            </li>
+                            <li class="d-flex"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                              </svg>
+                              <p class="ps-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, natus!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                      <ul class="p-0">
+                        <li class="d-flex"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                          </svg>
+                          <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, consectetur!</p>
+                        </li>
+                        <li class="d-flex"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                          </svg>
+                          <p class="ps-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, qui?</p>
+                        </li>
+                        <li class="d-flex"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                          </svg>
+                          <p class="ps-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, porro.</p>
+                        </li>
+                        <li class="d-flex"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                          </svg>
+                          <p class="ps-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, natus!</p>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <section class="discount">
+            <div class="container mt-5 discount-text">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <h3>Subscribe And Get 20% OFF On Your First Online Course</h3>
+                        <p>Sign Up for our newsletter and never miss any offers</p>
+                    </div>
+                    <div class="col-md-6 detail-form">
+                        <form id="form">
+                            <input type="email" name="email" placeholder="Write Your Email Address*" class="form-control bg-white border-0 rounded-4 shadow-none rounded-pill text-center px-4 py-3 w-100 mb-4">
+                            <button class="btn w-100">Get Started now</button><div class="d-grid">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container footer-m">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 foot1">
+                    <div class="footer-menu">
+                        <img src="./img/logo.png" alt="logo" class="img-fluid">
+                        <div class="social-links mt-4">
+                            <ul class="d-flex list-unstyled">
+                                <li class="me-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                      </svg>
+                                </li>
+                                <li class="me-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                                      </svg>
+                                </li>
+                                <li class="me-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                      </svg>
+                                </li>
+                                <li class="me-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                                      </svg>
+                                </li>
+                                <li class="me-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                                      </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-2 my-3">
+                    <div class="footer-menu">
+                      <h5 class=" fw-bold mb-4">Quick Links</h5>
+                      <ul class="menu-list list-unstyled">
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">About us</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Courses</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Blogs</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2 my-3">
+                    <div class="footer-menu">
+                      <h5 class=" fw-bold mb-4">Quick Links</h5>
+                      <ul class="menu-list list-unstyled">
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">About us</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Courses</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Blogs</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2 my-3">
+                    <div class="footer-menu">
+                      <h5 class=" fw-bold mb-4">Quick Links</h5>
+                      <ul class="menu-list list-unstyled">
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">About us</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Courses</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Blogs</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2 my-3">
+                    <div class="footer-menu">
+                      <h5 class=" fw-bold mb-4">Quick Links</h5>
+                      <ul class="menu-list list-unstyled">
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">About us</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Courses</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Blogs</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                          <a href="#" class="footer-link">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+        <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col reserved text-center">
+            <p>All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
